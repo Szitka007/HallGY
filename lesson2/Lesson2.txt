@@ -1,0 +1,62 @@
+Feladat:
+
+
+Switch 2960
+2 PC
+
+Összekötve egyenes
+
+Ip címzés (C típusú ip)
+
+SW:
+	IP címzés:
+		- interface vlan1
+		ip adress ... maszk
+		NO SHUTDOWN
+
+
+Elmélet:
+	192.168.70.0 /24  
+	70-es lan kind of
+	
+	
+	00000001 = 1
+	00000010 = 2
+	00000011 = 3
+	00000100 = 4
+	00000101 = 5
+	.
+	.
+	.
+	11111110 = 254
+	11111111 = 255
+	
+	8db nulla = hálózatcím
+	8db egyes = szórás
+	
+	módok jelszavazás:
+		- conf módok:
+			> felhasználói mód -------------- jelszavazható
+				- belépünk konzol alap konfig
+				- vagy távolról
+					- működő hálózat indokolt volna hozzá :D
+					- két protokol
+						- telnet
+						- SSH(titkosított)
+			# privilegizált exec mód ---------------- jelszavazható
+				- enable password 
+				- enable secret
+			(config)# globális
+			(config - if)#globális almód
+			secure password-encryption (minden jelszó eltitkosul)	
+	banner motd %valami%
+	
+	
+	
+	ctrl+shift+6
+	
+	integrált router = vezetéknélküli, switch, router
+	ISR = Integrated Service Router
+
+	
+			
