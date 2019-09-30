@@ -1,0 +1,12 @@
+konfig:
+	- hostname
+	- enable sec 
+	- console sec
+	- motd
+	- mentés
+
+Ip címzés:
+	- vlan 1 x 2
+	- router 2 interface
+
+
