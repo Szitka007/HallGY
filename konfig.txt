@@ -1,0 +1,12 @@
+line vty 0 15
+password vty
+login
+exit
+ena pass ena
+
+
+copy running-config startup-config
+
+copy startup-config  tftp:
+192.168.30.254
+jobbswitch
