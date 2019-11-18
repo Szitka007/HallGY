@@ -1,0 +1,35 @@
+Router conf:
+------------------
+	ena
+	conf t
+	enable password ena
+	line vty 0 15
+	password vty
+	login
+	end
+	
+	
+switch
+------------------------------
+	ena
+	conf t
+	enable password ena
+	line vty 0 15
+	password vty
+	login
+	end
+	
+	conf t
+	interface vlan1
+	ip address 192.168.52.2 255.255.255.0
+	no shutdown
+	
+	
+másolás
+------------------------------------------------
+ena
+ena
+cop run start
+copy startup-config tftp: 
+192.168.52.254
+SW1
