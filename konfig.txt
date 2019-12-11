@@ -10,3 +10,7 @@ copy running-config startup-config
 copy startup-config  tftp:
 192.168.30.254
 jobbswitch
+
+
+
+wBnkxvTXcVPZN3Rr
