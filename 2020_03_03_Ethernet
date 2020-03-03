@@ -1,0 +1,50 @@
+Ethernet protokoll
+EEE802.3(vezetékes LAN)
+Adatkapcsolati réteg
+PDU - Keret
+eszközei: Switch
+MAC-cím
+
+
+Fizikai cím:
+---------------
+48bit
+12db HEXA karakter
+tagolása ponttal vagy ketteses ponttal vagy kötőjellel
+	Részei:
+	---------
+	24bit           :24bit
+	OUI             :interfész azonosító
+	gyártóazonosító :-||-
+
+Keretezés:
+	- Hálózati rétegből érkező csomagot keretfejfával látja el, és így elkészül maga a KERET.
+
+Keretfejléc:
+	 7 bájt|1 bájt      |6 bájt     |6 bájt        |2 bájt|46-1500 bájt|4 bájt                   |
+	 ------|------------|-----------|--------------|------|------------|-------------------------|
+	 Előtag|Keretk kezdő|Cél MAC-cím|Forrás MAC-cím|Hossz |Adat        |FCS(Frame Check Sequence)|
+
+	 Minimális keretméret: 64 bájt
+	 Maximális keretméret: 1518
+	 Maximális keretméret 2(hamarosan a mozikban): +VLAN ID = 4 bájt => 1522
+
+RUNT = Töredékes keret ==> keletkezése hogy pl a HUBon belül ütköznekezek a gecik eltörik aztán mehetünk az IKEAba venni mégegyet faszom aztán lehet menni, hogy aha rendben csempe, aztán mennyi nappali, aztán végre képkeret, aztán szét, aztán asztal aztán Segíthetek Tibi aztán zsaaa haza
+
+Switchben egy porttal komunikál, tehát rövidrezárja a kommunikációt, nincs ütközés, minden port külön ütközési tartomány.
+
+Szórási tartomány:
+	A router minden interface-je külön külön szórási tartomány
+
+
+Keret címzésének fajtái:
+	- UNICAST -> Forrás a céllal kizárólag
+		- 12:34:56:78:AB:DE
+	- MultiCast
+		- Csoportos
+		- 01:00:5E:11:22:33
+		- 01:00:5E:AB:CC:DE
+
+	- Broadcast
+		- Mindenkihez
+		- FF:FF:FF:FF:FF:FF
